@@ -1,0 +1,22 @@
+//Buttons
+
+.btn {
+  color: #fff;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem; /* 208.333% */
+  letter-spacing: 2.571px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid rgba($white, 0.2);
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 35rem;
+}
+
+.btn.active {
+  background-color: $cyan;
+  border-color: currentColor;
+}

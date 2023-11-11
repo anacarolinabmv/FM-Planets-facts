@@ -1,0 +1,91 @@
+.h1,
+.h2,
+.h3,
+.h4 {
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.h1 {
+  font-family: "Antonio", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2.5rem; /* 227.273% */
+  letter-spacing: 1px;
+}
+
+.h2 {
+  font-family: "Antonio", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+
+.h3 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.5rem; /* 208.333% */
+  letter-spacing: 2.571px;
+}
+
+.h4 {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2.5rem; /* 227.273% */
+  letter-spacing: 1px;
+}
+
+.paragraph {
+  color: #fff;
+  font-family: "League Spartan", sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+
+.btn {
+  color: #fff;
+  font-family: "League Spartan", sans-serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 2.5rem; /* 208.333% */
+  letter-spacing: 2.571px;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.2rem;
+  width: 100%;
+  max-width: 35rem;
+}
+
+.btn.active {
+  background-color: #419ebb;
+  border-color: currentColor;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #070724;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */

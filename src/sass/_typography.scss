@@ -1,0 +1,46 @@
+.h1,
+.h2,
+.h3,
+.h4 {
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+.h1 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2.5rem; /* 227.273% */
+  letter-spacing: 1px;
+}
+.h2 {
+  font-family: 'Antonio', sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+.h3 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 2.5rem; /* 208.333% */
+  letter-spacing: 2.571px;
+}
+.h4 {
+  font-family: 'League Spartan', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 2.5rem; /* 227.273% */
+  letter-spacing: 1px;
+}
+
+.paragraph {
+  color: #fff;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
