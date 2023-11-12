@@ -8,7 +8,7 @@
 
 .h1 {
   font-family: "Antonio", sans-serif;
-  font-size: 1.1rem;
+  font-size: 8rem;
   font-weight: 700;
   line-height: 2.5rem; /* 227.273% */
   letter-spacing: 1px;
@@ -86,6 +86,83 @@ body {
   height: 100vh;
   background-color: #070724;
   overflow: hidden;
+  background-image: url(../../assets/images/background-stars.svg);
+}
+
+.navigation {
+  padding: 2.2rem 3.2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navigation__logo-box {
+  margin-right: auto;
+}
+.navigation__logo-box .logo {
+  color: #fff;
+  font-family: "Antonio", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -1.05px;
+  text-transform: uppercase;
+}
+.navigation__planets-list {
+  list-style: none;
+  display: flex;
+  gap: 3.3rem;
+}
+.navigation__list-item {
+  display: inline-block;
+}
+.navigation__link {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.75;
+  transition: 0.2s ease-in;
+  position: relative;
+}
+.navigation__link:hover, .navigation__link:active {
+  opacity: 1;
+}
+.navigation__link::after {
+  content: "";
+  top: -3.5rem;
+  left: 0;
+  position: absolute;
+  width: 0;
+  height: 4px;
+  z-index: 4;
+  visibility: hidden;
+  transition: width 0.25s ease-in;
+}
+.navigation__link--mercury::after {
+  background-color: #419ebb;
+}
+.navigation__link--venus::after {
+  background-color: #eda249;
+}
+.navigation__link--earth::after {
+  background-color: #6d2ed5;
+}
+.navigation__link--mars::after {
+  background-color: #d14c32;
+}
+.navigation__link--jupiter::after {
+  background-color: #d83a34;
+}
+.navigation__link--saturn::after {
+  background-color: #cd5120;
+}
+.navigation__link--uranus::after {
+  background-color: #1ec1a2;
+}
+.navigation__link--neptune::after {
+  background-color: #2d68f0;
+}
+.navigation__link:hover::after {
+  visibility: visible;
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,85 @@
+.navigation {
+  padding: 2.2rem 3.2rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba($white, 0.2);
+
+  &__logo-box {
+    margin-right: auto;
+
+    .logo {
+      color: $white;
+      font-family: 'Antonio', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -1.05px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__planets-list {
+    list-style: none;
+    display: flex;
+    gap: 3.3rem;
+  }
+
+  &__list-item {
+    display: inline-block;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $white;
+    opacity: 0.75;
+    transition: 0.2s ease-in;
+    position: relative;
+
+    &:hover,
+    &:active {
+      opacity: 1;
+    }
+
+    &::after {
+      content: '';
+      top: -3.5rem;
+      left: 0;
+      position: absolute;
+      width: 0;
+      height: 4px;
+      z-index: 4;
+      visibility: hidden;
+      transition: width 0.25s ease-in;
+    }
+
+    &--mercury::after {
+      background-color: $cyan;
+    }
+    &--venus::after {
+      background-color: $yellow;
+    }
+    &--earth::after {
+      background-color: $purple;
+    }
+    &--mars::after {
+      background-color: $orange1;
+    }
+    &--jupiter::after {
+      background-color: $red;
+    }
+    &--saturn::after {
+      background-color: $orange2;
+    }
+    &--uranus::after {
+      background-color: $green;
+    }
+    &--neptune::after {
+      background-color: $blue;
+    }
+  }
+
+  &__link:hover::after {
+    visibility: visible;
+    width: 100%;
+  }
+}
