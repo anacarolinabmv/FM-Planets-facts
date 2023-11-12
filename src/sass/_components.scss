@@ -11,12 +11,49 @@
   text-transform: uppercase;
   background-color: transparent;
   border: 1px solid rgba($white, 0.2);
-  padding: 1.2rem;
+  padding: 1.1rem;
+  padding-left: 2.4rem;
   width: 100%;
   max-width: 35rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  display: flex;
+  gap: 2.8rem;
+
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+
+  &--mercury.active {
+    background-color: $cyan;
+  }
+  &--venus.active {
+    background-color: $yellow;
+  }
+  &--earth.active {
+    background-color: $purple;
+  }
+  &--mars.active {
+    background-color: $orange1;
+  }
+  &--jupiter.active {
+    background-color: $red;
+  }
+  &--saturn.active {
+    background-color: $orange2;
+  }
+  &--uranus.active {
+    background-color: $green;
+  }
+  &--neptune.active {
+    background-color: $blue;
+  }
+
+  &:hover {
+    background-color: rgba($light-grey, 0.5);
+  }
 }
 
-.btn.active {
-  background-color: $cyan;
-  border-color: currentColor;
+.btn-number {
+  opacity: 0.5;
 }

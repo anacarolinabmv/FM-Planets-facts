@@ -7,4 +7,6 @@ export const getData = async function () {
   const data = await response.json();
 
   state.planets = data;
+
+  console.log(data);
 };

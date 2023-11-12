@@ -1,0 +1,66 @@
+.planet {
+  margin: 0 auto;
+  margin-top: 8rem;
+  display: grid;
+  width: 100%;
+  max-width: 118rem;
+  grid-template-columns: 1fr max-content;
+  color: $white;
+  padding: 0 4rem;
+
+  &__picture-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__picture {
+    height: 100%;
+    max-width: 30rem;
+    max-height: 30rem;
+    width: 100%;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 35rem;
+  }
+
+  &__source {
+    display: inline-block;
+    margin: 2.4rem 0;
+    display: flex;
+    align-items: center;
+  }
+  &__source-link {
+    opacity: 0.5;
+    font-weight: 700;
+    text-decoration-line: underline;
+    padding: 0 0.8rem;
+  }
+
+  &__source-icon {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info-boxes {
+    grid-column: 1 / span 2;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    gap: 1rem;
+  }
+
+  &__info-box {
+    border: 1px solid rgba($white, 0.2);
+    width: 100%;
+    max-width: 25.5rem;
+    padding: 2rem 2.3rem;
+
+    &__heading {
+      opacity: 0.5;
+    }
+  }
+}
