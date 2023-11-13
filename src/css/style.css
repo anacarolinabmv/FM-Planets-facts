@@ -9,9 +9,10 @@
 .h1 {
   font-family: "Antonio", sans-serif;
   font-size: 8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
   margin-bottom: 0.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .h2 {
@@ -49,13 +50,6 @@
 
 .btn {
   color: #fff;
-  font-family: "League Spartan", sans-serif;
-  font-size: 1.2rem;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 2.5rem; /* 208.333% */
-  letter-spacing: 2.571px;
-  text-transform: uppercase;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 1.1rem;
@@ -104,7 +98,7 @@
 
 .planet {
   margin: 0 auto;
-  margin-top: 8rem;
+  margin-top: 6rem;
   display: grid;
   width: 100%;
   max-width: 118rem;
@@ -128,20 +122,17 @@
   max-width: 35rem;
 }
 .planet__source {
-  display: inline-block;
   margin: 2.4rem 0;
   display: flex;
-  align-items: center;
+  opacity: 0.5;
 }
 .planet__source-link {
-  opacity: 0.5;
   font-weight: 700;
   text-decoration-line: underline;
-  padding: 0 0.8rem;
-}
-.planet__source-icon {
+  margin-left: 0.8rem;
   display: flex;
   align-items: center;
+  gap: 0.8rem;
 }
 .planet__info-boxes {
   grid-column: 1/span 2;
