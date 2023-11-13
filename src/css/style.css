@@ -8,8 +8,8 @@
 
 .h1 {
   font-family: "Antonio", sans-serif;
-  font-size: 8rem;
-  margin-bottom: 0.6rem;
+  font-size: 7.4rem;
+  margin-bottom: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -98,28 +98,35 @@
 
 .planet {
   margin: 0 auto;
-  margin-top: 6rem;
   display: grid;
   width: 100%;
   max-width: 118rem;
+  height: 100vh;
   grid-template-columns: 1fr max-content;
+  grid-template-rows: 68vh 1fr;
   color: #fff;
   padding: 0 4rem;
 }
 .planet__picture-box {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
 }
 .planet__picture {
-  height: 100%;
-  max-width: 30rem;
-  max-height: 30rem;
-  width: 100%;
+  max-height: 95%;
+}
+.planet__picture--geology {
+  position: absolute;
+  height: 19.9rem;
+  width: 15.8rem;
+  top: 60%;
 }
 .planet__text {
   width: 100%;
   max-width: 35rem;
+  margin-top: 4.8rem;
 }
 .planet__source {
   margin: 2.4rem 0;
@@ -137,13 +144,15 @@
 .planet__info-boxes {
   grid-column: 1/span 2;
   grid-row: 2;
+  height: 100%;
   display: flex;
   justify-content: space-between;
-  margin-top: 4rem;
   gap: 1rem;
+  margin-top: 4rem;
 }
 .planet__info-box {
   border: 1px solid rgba(255, 255, 255, 0.2);
+  height: 12rem;
   width: 100%;
   max-width: 25.5rem;
   padding: 2rem 2.3rem;
@@ -173,7 +182,7 @@ body {
 }
 
 .navigation {
-  padding: 2.2rem 3.2rem;
+  padding: 2rem 3.2rem;
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);

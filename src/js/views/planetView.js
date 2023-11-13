@@ -109,7 +109,7 @@ class PlanetView {
         <img src="assets/images/planet-${this.#planetName}.svg" class="planet__picture" alt="Picure ${
       this.#planetName
     } " />
-    <img src="assets/images/geology-${this.#planetName}.png" />
+    <img class="planet__picture--geology" src="assets/images/geology-${this.#planetName}.png" />
       </div>
       <div class="planet__text">
         <h1 class="h1">${this.#planetObj.name}</h1>

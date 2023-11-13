@@ -1,29 +1,36 @@
 .planet {
   margin: 0 auto;
-  margin-top: 6rem;
   display: grid;
   width: 100%;
   max-width: 118rem;
+  height: 100vh;
   grid-template-columns: 1fr max-content;
+  grid-template-rows: 68vh 1fr;
   color: $white;
   padding: 0 4rem;
 
   &__picture-box {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
   }
 
   &__picture {
-    height: 100%;
-    max-width: 30rem;
-    max-height: 30rem;
-    width: 100%;
+    max-height: 95%;
+    &--geology {
+      position: absolute;
+      height: 19.9rem;
+      width: 15.8rem;
+      top: 60%;
+    }
   }
 
   &__text {
     width: 100%;
     max-width: 35rem;
+    margin-top: 4.8rem;
   }
 
   &__source {
@@ -43,14 +50,16 @@
   &__info-boxes {
     grid-column: 1 / span 2;
     grid-row: 2;
+    height: 100%;
     display: flex;
     justify-content: space-between;
-    margin-top: 4rem;
     gap: 1rem;
+    margin-top: 4rem;
   }
 
   &__info-box {
     border: 1px solid rgba($white, 0.2);
+    height: 12rem;
     width: 100%;
     max-width: 25.5rem;
     padding: 2rem 2.3rem;
