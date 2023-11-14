@@ -2,13 +2,6 @@
 
 .btn {
   color: #fff;
-  // font-family: 'League Spartan', sans-serif;
-  // font-size: 1.2rem;
-  // font-style: normal;
-  // font-weight: 700;
-  // line-height: 2.5rem; /* 208.333% */
-  // letter-spacing: 2.571px;
-  // text-transform: uppercase;
   background-color: transparent;
   border: 1px solid rgba($white, 0.2);
   padding: 1.1rem;
@@ -24,32 +17,32 @@
     margin-bottom: 1.6rem;
   }
 
-  &--mercury.active {
+  &--mercury.btn--active {
     background-color: $cyan;
   }
-  &--venus.active {
+  &--venus.btn--active {
     background-color: $yellow;
   }
-  &--earth.active {
+  &--earth.btn--active {
     background-color: $purple;
   }
-  &--mars.active {
+  &--mars.btn--active {
     background-color: $orange1;
   }
-  &--jupiter.active {
+  &--jupiter.btn--active {
     background-color: $red;
   }
-  &--saturn.active {
+  &--saturn.btn--active {
     background-color: $orange2;
   }
-  &--uranus.active {
+  &--uranus.btn--active {
     background-color: $green;
   }
-  &--neptune.active {
+  &--neptune.btn--active {
     background-color: $blue;
   }
 
-  &:hover {
+  &:not(.btn--active):hover {
     background-color: rgba($light-grey, 0.5);
   }
 }

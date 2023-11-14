@@ -64,31 +64,31 @@
 .btn:not(:last-child) {
   margin-bottom: 1.6rem;
 }
-.btn--mercury.active {
+.btn--mercury.btn--active {
   background-color: #419ebb;
 }
-.btn--venus.active {
+.btn--venus.btn--active {
   background-color: #eda249;
 }
-.btn--earth.active {
+.btn--earth.btn--active {
   background-color: #6d2ed5;
 }
-.btn--mars.active {
+.btn--mars.btn--active {
   background-color: #d14c32;
 }
-.btn--jupiter.active {
+.btn--jupiter.btn--active {
   background-color: #d83a34;
 }
-.btn--saturn.active {
+.btn--saturn.btn--active {
   background-color: #cd5120;
 }
-.btn--uranus.active {
+.btn--uranus.btn--active {
   background-color: #1ec1a2;
 }
-.btn--neptune.active {
+.btn--neptune.btn--active {
   background-color: #2d68f0;
 }
-.btn:hover {
+.btn:not(.btn--active):hover {
   background-color: rgba(131, 131, 145, 0.5);
 }
 
@@ -223,7 +223,7 @@ body {
   left: 0;
   position: absolute;
   width: 0;
-  height: 4px;
+  height: 6px;
   z-index: 4;
   visibility: hidden;
   transition: width 0.25s ease-in;

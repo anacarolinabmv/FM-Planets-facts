@@ -9,6 +9,7 @@ class NavigationView {
       handler(query);
     });
   }
+
   render(data) {
     this.#data = data;
     const markup = this.generateMarkup();
