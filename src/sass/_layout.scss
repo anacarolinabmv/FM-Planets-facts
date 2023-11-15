@@ -19,7 +19,10 @@
 
   &__picture {
     max-height: 95%;
+    animation: fadeIn 0.3s ease;
+
     &--geology {
+      animation: fadeIn 0.3s ease;
       position: absolute;
       height: 19.9rem;
       width: 15.8rem;

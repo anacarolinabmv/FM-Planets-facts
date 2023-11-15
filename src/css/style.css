@@ -116,8 +116,10 @@
 }
 .planet__picture {
   max-height: 95%;
+  animation: fadeIn 0.3s ease;
 }
 .planet__picture--geology {
+  animation: fadeIn 0.3s ease;
   position: absolute;
   height: 19.9rem;
   width: 15.8rem;
@@ -255,6 +257,15 @@ body {
 .navigation__link:hover::after {
   visibility: visible;
   width: 100%;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
