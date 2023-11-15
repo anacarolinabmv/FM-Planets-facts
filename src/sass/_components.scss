@@ -47,6 +47,9 @@
   }
 }
 
+.btn--active {
+  animation: fadeIn 0.3s ease;
+}
 .btn-number {
   opacity: 0.5;
 }

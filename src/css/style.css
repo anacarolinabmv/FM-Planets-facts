@@ -92,6 +92,10 @@
   background-color: rgba(131, 131, 145, 0.5);
 }
 
+.btn--active {
+  animation: fadeIn 0.3s ease;
+}
+
 .btn-number {
   opacity: 0.5;
 }
@@ -181,6 +185,7 @@ body {
   background-color: #070724;
   overflow: hidden;
   background-image: url(../../assets/images/background-stars.svg);
+  background-size: cover;
 }
 
 .navigation {
