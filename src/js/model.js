@@ -1,5 +1,5 @@
 export const state = {
-  query: '',
+  query: 'Mercury',
   planets: {},
 };
 

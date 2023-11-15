@@ -14,7 +14,7 @@ class PlanetView {
     });
   }
 
-  render(data, view) {
+  render(data, view = 'overview') {
     this.#data = data;
     this.#view = view;
     this.#planetObj = this.#data.planets.find((entry) => entry.name === data.query);
@@ -31,27 +31,23 @@ class PlanetView {
   }
 
   #generateImgMarkup() {
-    if (this.#view === 'overview') {
-      return `
-       <img src="assets/images/planet-${this.#planetName}.svg" class="planet__picture" alt="Picure ${
-        this.#planetName
-      } " />`;
-    }
-    if (this.#view === 'structure') {
-      return `
+    const imgPath1 = `<img src="assets/images/planet-${this.#planetName}.svg" class="planet__picture" alt="Picure ${
+      this.#planetName
+    } " />`;
+    const imgPath2 = `
       <img src="assets/images/planet-${this.#planetName}-internal.svg" class="planet__picture" alt="Picure ${
-        this.#planetName
-      } " />`;
-    }
+      this.#planetName
+    } " />`;
+
+    if (this.#view === 'overview') return imgPath1;
+    if (this.#view === 'structure') return imgPath2;
     if (this.#view === 'geology') {
-      return `
-  <img src="assets/images/planet-${this.#planetName}.svg" class="planet__picture" alt="Picure ${this.#planetName} " />
-    <img class="planet__picture--geology" src="assets/images/geology-${this.#planetName}.png" />`;
+      return imgPath1 + `<img class="planet__picture--geology" src="assets/images/geology-${this.#planetName}.png" />`;
     }
   }
 
   #generateMarkup() {
-    return ` <div class="planet__picture-box">
+    return `<div class="planet__picture-box">
        ${this.#generateImgMarkup()}
       </div>
       <div class="planet__text">

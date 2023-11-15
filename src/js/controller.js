@@ -5,13 +5,12 @@ import planetView from './views/planetView.js';
 
 //Render the navigation
 
-const getPlanet = function (query = 'Mercury') {
+const controlNavButtons = function (query = 'Mercury') {
   model.state.query = query;
-
-  planetView.render(model.state, 'overview');
+  planetView.render(model.state);
 };
 
-const controlButtons = function (view) {
+const controlViewButtons = function (view) {
   planetView.render(model.state, view);
 };
 
@@ -22,11 +21,12 @@ const init = async function () {
   //2) Render the navigation
   navigationView.render(model.state.planets);
 
-  getPlanet();
+  //3) Render Mercury view
+  planetView.render(model.state);
 
   //3) Add the handlers to the views
-  navigationView.addHandler(getPlanet);
-  planetView.addHandler(controlButtons);
+  navigationView.addHandler(controlNavButtons);
+  planetView.addHandler(controlViewButtons);
 };
 
 init();
