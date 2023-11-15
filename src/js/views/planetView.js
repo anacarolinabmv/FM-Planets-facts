@@ -17,7 +17,7 @@ class PlanetView {
   render(data, view = 'overview') {
     this.#data = data;
     this.#view = view;
-    this.#planetObj = this.#data.planets.find((entry) => entry.name === data.query);
+    this.#planetObj = this.#data.planets.find((entry) => entry.name === `${data.query ? data.query : 'Mercury'}`);
     this.#planetName = this.#planetObj.name.toLowerCase();
 
     const markup = this.#generateMarkup();
