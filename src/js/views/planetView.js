@@ -7,7 +7,7 @@ class PlanetView {
 
   addHandler(handler) {
     this.#parentElement.addEventListener('click', (e) => {
-      const btnClicked = e.target.closest('button');
+      const btnClicked = e.target.closest('.btn--view');
       if (!btnClicked) return;
 
       handler(btnClicked.dataset.view);
@@ -58,13 +58,13 @@ class PlanetView {
             this.#planetObj[this.#view].source
           }" class="planet__source-link paragraph" target="_blank">Link <img src="assets/images/icon-source.svg" /></a></span>
          </small>
-        <button class="btn btn--${this.#planetName} ${
+        <button class="btn btn--view btn--${this.#planetName} ${
       this.#view === 'overview' ? 'btn--active' : ''
     }  h3" data-view="overview"><span class="btn-number">01</span>Overview</button>
-        <button class="btn btn--${this.#planetName} ${
+        <button class="btn btn--view btn--${this.#planetName} ${
       this.#view === 'structure' ? 'btn--active' : ''
     } h3" data-view="structure"><span class="btn-number">02</span>Internal Structure</button>
-        <button class="btn btn--${this.#planetName} ${
+        <button class="btn btn--view btn--${this.#planetName} ${
       this.#view === 'geology' ? 'btn--active' : ''
     } h3" data-view="geology"><span class="btn-number">03</span>Surface Geology</button>
       </div>
