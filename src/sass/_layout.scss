@@ -1,25 +1,48 @@
 .planet {
   margin: 0 auto;
   display: grid;
+  gap: 3rem;
   width: 100%;
-  max-width: 118rem;
-  height: 100vh;
+  max-width: 114rem;
   grid-template-columns: 1fr max-content;
-  grid-template-rows: 68vh 1fr;
+  grid-template-rows: 55rem 1fr;
   color: $white;
-  padding: 0 4rem;
+  background-color: rebeccapurple;
+
+  @media (max-width: $tablet) {
+    margin-top: 3rem;
+    gap: 0;
+    grid-template-rows: 40vh 1fr max-content;
+  }
 
   &__picture-box {
+    align-self: center;
+    justify-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: red;
+
     position: relative;
     height: 100%;
+
+    @media (max-width: $tablet) {
+      grid-column: 1 / span 2;
+    }
   }
 
   &__picture {
-    max-height: 95%;
+    max-height: 100%;
     animation: fadeIn 0.3s ease;
+    transform: scale(0.92);
+
+    @media (max-width: $large) {
+      transform: scale(0.8);
+    }
+    @media (max-width: $tablet) {
+      transform: scale(0.7);
+      max-height: 150%;
+    }
 
     &--geology {
       animation: fadeIn 0.3s ease;
@@ -27,13 +50,42 @@
       height: 19.9rem;
       width: 15.8rem;
       top: 60%;
+
+      @media (max-width: $tablet) {
+        height: 13.4rem;
+        width: 11.1rem;
+        top: 70%;
+      }
     }
   }
 
   &__text {
     width: 100%;
     max-width: 35rem;
-    margin-top: 4.8rem;
+    margin-top: 4rem;
+    background-color: green;
+
+    @media (max-width: $tablet) {
+      grid-column: 1 / span 2;
+      display: flex;
+      gap: 4rem;
+      align-items: center;
+      justify-content: space-around;
+      max-width: none;
+      margin-top: 2rem;
+    }
+  }
+  &__description {
+    @media (max-width: $tablet) {
+      width: 100%;
+      max-width: 34rem;
+    }
+  }
+  &__view {
+    @media (max-width: $tablet) {
+      width: 100%;
+      max-width: 28rem;
+    }
   }
 
   &__source {
@@ -53,11 +105,14 @@
   &__info-boxes {
     grid-column: 1 / span 2;
     grid-row: 2;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-    margin-top: 4rem;
+    padding-bottom: 2rem;
+
+    @media (max-width: $tablet) {
+      grid-row: 3;
+    }
   }
 
   &__info-box {
@@ -66,6 +121,11 @@
     width: 100%;
     max-width: 25.5rem;
     padding: 2rem 2.3rem;
+
+    @media (max-width: $tablet) {
+      height: 8.8rem;
+      padding: 1.5rem;
+    }
 
     &__heading {
       opacity: 0.5;

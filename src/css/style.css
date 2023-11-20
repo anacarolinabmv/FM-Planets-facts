@@ -14,6 +14,11 @@
   font-weight: 400;
   line-height: normal;
 }
+@media (max-width: 60em) {
+  .h1 {
+    font-size: 6rem;
+  }
+}
 
 .h2 {
   font-family: "Antonio", sans-serif;
@@ -21,6 +26,11 @@
   font-weight: 400;
   line-height: normal;
   letter-spacing: -1.5px;
+}
+@media (max-width: 60em) {
+  .h2 {
+    font-size: 2.4rem;
+  }
 }
 
 .h3 {
@@ -55,7 +65,6 @@
   padding: 1.1rem;
   padding-left: 2.4rem;
   width: 100%;
-  max-width: 35rem;
   cursor: pointer;
   transition: background-color 0.25s ease;
   display: flex;
@@ -103,24 +112,51 @@
 .planet {
   margin: 0 auto;
   display: grid;
+  gap: 3rem;
   width: 100%;
-  max-width: 118rem;
-  height: 100vh;
+  max-width: 114rem;
   grid-template-columns: 1fr max-content;
-  grid-template-rows: 68vh 1fr;
+  grid-template-rows: 55rem 1fr;
   color: #fff;
-  padding: 0 4rem;
+  background-color: rebeccapurple;
+}
+@media (max-width: 60em) {
+  .planet {
+    margin-top: 3rem;
+    gap: 0;
+    grid-template-rows: 40vh 1fr max-content;
+  }
 }
 .planet__picture-box {
+  align-self: center;
+  justify-self: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: red;
   position: relative;
   height: 100%;
 }
+@media (max-width: 60em) {
+  .planet__picture-box {
+    grid-column: 1/span 2;
+  }
+}
 .planet__picture {
-  max-height: 95%;
+  max-height: 100%;
   animation: fadeIn 0.3s ease;
+  transform: scale(0.92);
+}
+@media (max-width: 68.75em) {
+  .planet__picture {
+    transform: scale(0.8);
+  }
+}
+@media (max-width: 60em) {
+  .planet__picture {
+    transform: scale(0.7);
+    max-height: 150%;
+  }
 }
 .planet__picture--geology {
   animation: fadeIn 0.3s ease;
@@ -129,10 +165,41 @@
   width: 15.8rem;
   top: 60%;
 }
+@media (max-width: 60em) {
+  .planet__picture--geology {
+    height: 13.4rem;
+    width: 11.1rem;
+    top: 70%;
+  }
+}
 .planet__text {
   width: 100%;
   max-width: 35rem;
-  margin-top: 4.8rem;
+  margin-top: 4rem;
+  background-color: green;
+}
+@media (max-width: 60em) {
+  .planet__text {
+    grid-column: 1/span 2;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: space-around;
+    max-width: none;
+    margin-top: 2rem;
+  }
+}
+@media (max-width: 60em) {
+  .planet__description {
+    width: 100%;
+    max-width: 34rem;
+  }
+}
+@media (max-width: 60em) {
+  .planet__view {
+    width: 100%;
+    max-width: 28rem;
+  }
 }
 .planet__source {
   margin: 2.4rem 0;
@@ -150,11 +217,15 @@
 .planet__info-boxes {
   grid-column: 1/span 2;
   grid-row: 2;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 4rem;
+  padding-bottom: 2rem;
+}
+@media (max-width: 60em) {
+  .planet__info-boxes {
+    grid-row: 3;
+  }
 }
 .planet__info-box {
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -162,6 +233,12 @@
   width: 100%;
   max-width: 25.5rem;
   padding: 2rem 2.3rem;
+}
+@media (max-width: 60em) {
+  .planet__info-box {
+    height: 8.8rem;
+    padding: 1.5rem;
+  }
 }
 .planet__info-box__heading {
   opacity: 0.5;
@@ -177,13 +254,20 @@
 
 html {
   font-size: 62.5%;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+@media (max-width: 42em) {
+  html {
+    font-size: 56.25%;
+  }
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
   background-color: #070724;
-  overflow: hidden;
+  overflow-x: hidden;
   background-image: url(../../assets/images/background-stars.svg);
   background-size: cover;
 }
@@ -194,8 +278,19 @@ body {
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+@media (max-width: 60em) {
+  .navigation {
+    flex-direction: column;
+  }
+}
 .navigation__logo-box {
   margin-right: auto;
+}
+@media (max-width: 60em) {
+  .navigation__logo-box {
+    width: 100%;
+    text-align: center;
+  }
 }
 .navigation__logo-box .logo {
   color: #fff;
@@ -210,6 +305,11 @@ body {
   list-style: none;
   display: flex;
   gap: 3.3rem;
+}
+@media (max-width: 60em) {
+  .navigation__planets-list {
+    margin-top: 3rem;
+  }
 }
 .navigation__list-item {
   display: inline-block;
@@ -226,14 +326,19 @@ body {
 }
 .navigation__link::after {
   content: "";
-  top: -3.5rem;
+  top: -3rem;
   left: 0;
   position: absolute;
   width: 0;
-  height: 6px;
+  height: 4px;
   z-index: 4;
   visibility: hidden;
   transition: width 0.25s ease-in;
+}
+@media (max-width: 60em) {
+  .navigation__link::after {
+    top: -1.2rem;
+  }
 }
 .navigation__link--mercury::after {
   background-color: #419ebb;

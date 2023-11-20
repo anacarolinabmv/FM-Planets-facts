@@ -4,8 +4,17 @@
   align-items: center;
   border-bottom: 1px solid rgba($white, 0.2);
 
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+
   &__logo-box {
     margin-right: auto;
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      text-align: center;
+    }
 
     .logo {
       color: $white;
@@ -22,6 +31,10 @@
     list-style: none;
     display: flex;
     gap: 3.3rem;
+
+    @media (max-width: $tablet) {
+      margin-top: 3rem;
+    }
   }
 
   &__list-item {
@@ -42,14 +55,18 @@
 
     &::after {
       content: '';
-      top: -3.5rem;
+      top: -3rem;
       left: 0;
       position: absolute;
       width: 0;
-      height: 6px;
+      height: 4px;
       z-index: 4;
       visibility: hidden;
       transition: width 0.25s ease-in;
+
+      @media (max-width: $tablet) {
+        top: -1.2rem;
+      }
     }
 
     &--mercury::after {

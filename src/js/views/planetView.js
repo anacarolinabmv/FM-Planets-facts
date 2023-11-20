@@ -50,15 +50,18 @@ class PlanetView {
     return `<div class="planet__picture-box">
        ${this.#generateImgMarkup()}
       </div>
-      <div class="planet__text">
+    <div class="planet__text">
+      <div class="planet__description">
         <h1 class="h1">${this.#planetObj.name}</h1>
         <p class="paragraph">${this.#planetObj[this.#view].content}</p>
         <small class="planet__source paragraph"
-          >Source: <span><a href="${
-            this.#planetObj[this.#view].source
-          }" class="planet__source-link paragraph" target="_blank">Link <img src="assets/images/icon-source.svg" /></a></span>
-         </small>
-        <button class="btn btn--view btn--${this.#planetName} ${
+        >Source: <span><a href="${
+          this.#planetObj[this.#view].source
+        }" class="planet__source-link paragraph" target="_blank">Link <img src="assets/images/icon-source.svg" /></a></span>
+        </small>
+        </div>
+          <div class="planet__view">
+          <button class="btn btn--view btn--${this.#planetName} ${
       this.#view === 'overview' ? 'btn--active' : ''
     }  h3" data-view="overview"><span class="btn-number">01</span>Overview</button>
         <button class="btn btn--view btn--${this.#planetName} ${
@@ -68,6 +71,7 @@ class PlanetView {
       this.#view === 'geology' ? 'btn--active' : ''
     } h3" data-view="geology"><span class="btn-number">03</span>Surface Geology</button>
       </div>
+    </div>
       <div class="planet__info-boxes">
         <div class="planet__info-box">
           <h4 class="planet__info-box__heading h4">Rotation Time</h4>
