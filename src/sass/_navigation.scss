@@ -3,9 +3,14 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba($white, 0.2);
+  position: relative;
 
   @media (max-width: $tablet) {
     flex-direction: column;
+  }
+  @media (max-width: $phone) {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   &__logo-box {
@@ -14,6 +19,9 @@
     @media (max-width: $tablet) {
       width: 100%;
       text-align: center;
+    }
+    @media (max-width: $phone) {
+      text-align: left;
     }
 
     .logo {
@@ -27,6 +35,19 @@
     }
   }
 
+  &__btn {
+    display: none;
+    color: $white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+
+    @media (max-width: $phone) {
+      display: block;
+    }
+  }
+
   &__planets-list {
     list-style: none;
     display: flex;
@@ -35,10 +56,50 @@
     @media (max-width: $tablet) {
       margin-top: 3rem;
     }
+    @media (max-width: $phone) {
+      margin-top: 0;
+      flex-direction: column;
+      height: 100vh;
+      position: absolute;
+      top: 10rem;
+      left: 0;
+      gap: 0;
+      background-color: $dark-blue;
+      padding: 0 4rem 0 6rem;
+      width: 100%;
+      z-index: 999;
+      transform: translateX(-50%);
+      transition: all 0.3s ease-in;
+      opacity: 0;
+
+      &.show {
+        transform: translateX(0%);
+        opacity: 1;
+      }
+    }
   }
 
   &__list-item {
     display: inline-block;
+
+    @media (max-width: $phone) {
+      padding: 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid rgba($white, 0.1);
+      }
+    }
+
+    .icon--arrow {
+      display: none;
+      color: rgba($white, 0.4);
+      @media (max-width: $phone) {
+        display: inline-block;
+      }
+    }
   }
 
   &__link {
@@ -66,6 +127,16 @@
 
       @media (max-width: $tablet) {
         top: -1.2rem;
+      }
+
+      @media (max-width: $phone) {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        visibility: visible;
+        top: 50%;
+        left: -4rem;
+        transform: translateY(-50%);
       }
     }
 
@@ -98,5 +169,9 @@
   &__link:hover::after {
     visibility: visible;
     width: 100%;
+
+    @media (max-width: $phone) {
+      width: 2rem;
+    }
   }
 }

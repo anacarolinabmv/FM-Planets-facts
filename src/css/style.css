@@ -48,6 +48,11 @@
   line-height: 2.5rem; /* 227.273% */
   letter-spacing: 1px;
 }
+@media (max-width: 37.5rem) {
+  .h4 {
+    font-size: 1.5rem;
+  }
+}
 
 .paragraph {
   color: #fff;
@@ -118,7 +123,6 @@
   grid-template-columns: 1fr max-content;
   grid-template-rows: 55rem 1fr;
   color: #fff;
-  background-color: rebeccapurple;
 }
 @media (max-width: 60em) {
   .planet {
@@ -133,7 +137,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
   position: relative;
   height: 100%;
 }
@@ -176,7 +179,6 @@
   width: 100%;
   max-width: 35rem;
   margin-top: 4rem;
-  background-color: green;
 }
 @media (max-width: 60em) {
   .planet__text {
@@ -187,6 +189,7 @@
     justify-content: space-around;
     max-width: none;
     margin-top: 2rem;
+    padding: 0 2rem;
   }
 }
 @media (max-width: 60em) {
@@ -277,10 +280,17 @@ body {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
 }
 @media (max-width: 60em) {
   .navigation {
     flex-direction: column;
+  }
+}
+@media (max-width: 37.5rem) {
+  .navigation {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .navigation__logo-box {
@@ -292,6 +302,11 @@ body {
     text-align: center;
   }
 }
+@media (max-width: 37.5rem) {
+  .navigation__logo-box {
+    text-align: left;
+  }
+}
 .navigation__logo-box .logo {
   color: #fff;
   font-family: "Antonio", sans-serif;
@@ -300,6 +315,19 @@ body {
   line-height: normal;
   letter-spacing: -1.05px;
   text-transform: uppercase;
+}
+.navigation__btn {
+  display: none;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+@media (max-width: 37.5rem) {
+  .navigation__btn {
+    display: block;
+  }
 }
 .navigation__planets-list {
   list-style: none;
@@ -311,8 +339,50 @@ body {
     margin-top: 3rem;
   }
 }
+@media (max-width: 37.5rem) {
+  .navigation__planets-list {
+    margin-top: 0;
+    flex-direction: column;
+    height: 100vh;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    gap: 0;
+    background-color: #070724;
+    padding: 0 4rem 0 6rem;
+    width: 100%;
+    z-index: 999;
+    transform: translateX(-50%);
+    transition: all 0.3s ease-in;
+    opacity: 0;
+  }
+  .navigation__planets-list.show {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
 .navigation__list-item {
   display: inline-block;
+}
+@media (max-width: 37.5rem) {
+  .navigation__list-item {
+    padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .navigation__list-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+.navigation__list-item .icon--arrow {
+  display: none;
+  color: rgba(255, 255, 255, 0.4);
+}
+@media (max-width: 37.5rem) {
+  .navigation__list-item .icon--arrow {
+    display: inline-block;
+  }
 }
 .navigation__link {
   text-decoration: none;
@@ -338,6 +408,17 @@ body {
 @media (max-width: 60em) {
   .navigation__link::after {
     top: -1.2rem;
+  }
+}
+@media (max-width: 37.5rem) {
+  .navigation__link::after {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    visibility: visible;
+    top: 50%;
+    left: -4rem;
+    transform: translateY(-50%);
   }
 }
 .navigation__link--mercury::after {
@@ -367,6 +448,11 @@ body {
 .navigation__link:hover::after {
   visibility: visible;
   width: 100%;
+}
+@media (max-width: 37.5rem) {
+  .navigation__link:hover::after {
+    width: 2rem;
+  }
 }
 
 @keyframes fadeIn {

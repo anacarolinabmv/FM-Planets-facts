@@ -7,7 +7,6 @@
   grid-template-columns: 1fr max-content;
   grid-template-rows: 55rem 1fr;
   color: $white;
-  background-color: rebeccapurple;
 
   @media (max-width: $tablet) {
     margin-top: 3rem;
@@ -21,7 +20,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: red;
 
     position: relative;
     height: 100%;
@@ -63,7 +61,7 @@
     width: 100%;
     max-width: 35rem;
     margin-top: 4rem;
-    background-color: green;
+    // background-color: green;
 
     @media (max-width: $tablet) {
       grid-column: 1 / span 2;
@@ -73,6 +71,7 @@
       justify-content: space-around;
       max-width: none;
       margin-top: 2rem;
+      padding: 0 2rem;
     }
   }
   &__description {
