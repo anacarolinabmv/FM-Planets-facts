@@ -14,6 +14,11 @@ class PlanetView {
     });
   }
 
+  addHandlerMobileLayout() {
+    const mq = window.matchMedia('(max-width: 600px)');
+    mq.addEventListener('change', function () {});
+  }
+
   render(data, view = 'overview') {
     this.#data = data;
     this.#view = view;
@@ -46,6 +51,8 @@ class PlanetView {
     }
   }
 
+  #generateViewButtons() {}
+
   #generateMarkup() {
     return `<div class="planet__picture-box">
        ${this.#generateImgMarkup()}
@@ -60,16 +67,27 @@ class PlanetView {
         }" class="planet__source-link paragraph" target="_blank">Link <img src="assets/images/icon-source.svg" /></a></span>
         </small>
         </div>
-          <div class="planet__view">
+        <div class="planet__view">
           <button class="btn btn--view btn--${this.#planetName} ${
       this.#view === 'overview' ? 'btn--active' : ''
-    }  h3" data-view="overview"><span class="btn-number">01</span>Overview</button>
-        <button class="btn btn--view btn--${this.#planetName} ${
+    }  h3" data-view="overview">
+            <span class="btn-number hide-on-phone-media">01</span>
+            <span>Overview</span>
+          </button>
+          <button class="btn btn--view btn--${this.#planetName} ${
       this.#view === 'structure' ? 'btn--active' : ''
-    } h3" data-view="structure"><span class="btn-number">02</span>Internal Structure</button>
-        <button class="btn btn--view btn--${this.#planetName} ${
+    } h3" data-view="structure">
+            <span class="btn-number hide-on-phone-media">02</span>
+            <span class="hide-on-phone-media">Internal Structure</span> 
+            <span class="show-on-phone-media">Internal</span> 
+          </button>
+          <button class="btn btn--view btn--${this.#planetName} ${
       this.#view === 'geology' ? 'btn--active' : ''
-    } h3" data-view="geology"><span class="btn-number">03</span>Surface Geology</button>
+    } h3" data-view="geology">
+             <span class="btn-number hide-on-phone-media">03</span>
+             <span class="hide-on-phone-media">Surface Geology</span>
+             <span class="show-on-phone-media">Surface</span>
+          </button>
       </div>
     </div>
       <div class="planet__info-boxes">

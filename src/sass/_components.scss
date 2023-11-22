@@ -8,46 +8,84 @@
   padding-left: 2.4rem;
   width: 100%;
   cursor: pointer;
-  transition: background-color 0.25s ease;
+  transition: all 0.25s ease;
   display: flex;
   gap: 2.8rem;
+  position: relative;
+
+  @media (max-width: $phone) {
+    justify-content: center;
+    border: none;
+    border-bottom: 1px solid rgba($white, 0.2);
+
+    &--active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+    }
+  }
 
   &:not(:last-child) {
     margin-bottom: 1.6rem;
+
+    @media (max-width: $phone) {
+      margin-bottom: 0;
+    }
   }
 
-  &--mercury.btn--active {
+  &--mercury.btn--active,
+  &--mercury.btn--active::after {
     background-color: $cyan;
   }
-  &--venus.btn--active {
+
+  &--venus.btn--active,
+  &--venus.btn--active::after {
     background-color: $yellow;
   }
-  &--earth.btn--active {
+  &--earth.btn--active,
+  &--earth.btn--active::after {
     background-color: $purple;
   }
-  &--mars.btn--active {
+  &--mars.btn--active,
+  &--mars.btn--active::after {
     background-color: $orange1;
   }
-  &--jupiter.btn--active {
+  &--jupiter.btn--active,
+  &--jupiter.btn--active::after {
     background-color: $red;
   }
-  &--saturn.btn--active {
+  &--saturn.btn--active,
+  &--saturn.btn--active::after {
     background-color: $orange2;
   }
-  &--uranus.btn--active {
+  &--uranus.btn--active,
+  &--uranus.btn--active::after {
     background-color: $green;
   }
-  &--neptune.btn--active {
+  &--neptune.btn--active,
+  &--neptune.btn--active::after {
     background-color: $blue;
   }
 
   &:not(.btn--active):hover {
     background-color: rgba($light-grey, 0.5);
+
+    @media (max-width: $phone) {
+      background-color: transparent !important;
+      color: rgba($white, 0.7);
+    }
   }
 }
 
 .btn--active {
   animation: fadeIn 0.3s ease;
+
+  @media (max-width: $phone) {
+    background-color: transparent !important;
+  }
 }
 .btn-number {
   opacity: 0.5;

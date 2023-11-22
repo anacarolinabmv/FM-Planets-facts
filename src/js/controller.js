@@ -15,6 +15,7 @@ const controlViewButtons = function (view) {
 const bleh = function () {
   console.log('bleh');
 };
+
 const init = async function () {
   //1) Get data
   await model.getData();

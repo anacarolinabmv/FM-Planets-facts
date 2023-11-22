@@ -96,6 +96,7 @@
     .icon--arrow {
       display: none;
       color: rgba($white, 0.4);
+
       @media (max-width: $phone) {
         display: inline-block;
       }
