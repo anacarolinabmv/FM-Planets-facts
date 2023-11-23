@@ -14,11 +14,6 @@ class PlanetView {
     });
   }
 
-  addHandlerMobileLayout() {
-    const mq = window.matchMedia('(max-width: 600px)');
-    mq.addEventListener('change', function () {});
-  }
-
   render(data, view = 'overview') {
     this.#data = data;
     this.#view = view;
@@ -50,8 +45,6 @@ class PlanetView {
       return imgPath1 + `<img class="planet__picture--geology" src="assets/images/geology-${this.#planetName}.png" />`;
     }
   }
-
-  #generateViewButtons() {}
 
   #generateMarkup() {
     return `<div class="planet__picture-box">

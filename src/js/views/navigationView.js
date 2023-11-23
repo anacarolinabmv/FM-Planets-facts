@@ -5,7 +5,6 @@ class NavigationView {
 
   addHandlerNavLinks(handler) {
     this.#parentElement.addEventListener('click', function (e) {
-      console.log(e);
       if (!e.target.classList.contains('navigation__link')) return;
       const query = e.target.textContent;
 
