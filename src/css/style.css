@@ -156,6 +156,7 @@
   grid-template-rows: 55rem 1fr;
   color: #fff;
   position: relative;
+  animation: fadeIn 0.8s ease;
 }
 @media (max-width: 60em) {
   .planet {
@@ -175,7 +176,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: fadeIn 0.8s ease;
 }
 @media (max-width: 60em) {
   .planet__picture-box {
