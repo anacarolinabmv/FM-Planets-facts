@@ -79,6 +79,7 @@
 @media (max-width: 37.5rem) {
   .btn {
     justify-content: center;
+    padding: 2rem;
     border: none;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
@@ -147,11 +148,10 @@
 }
 
 .planet {
-  margin: 0 auto;
   display: grid;
-  gap: 3rem;
+  gap: 2rem;
   width: 100%;
-  max-width: 114rem;
+  max-width: 110rem;
   grid-template-columns: 1fr max-content;
   grid-template-rows: 55rem 1fr;
   color: #fff;
@@ -160,7 +160,6 @@
 @media (max-width: 60em) {
   .planet {
     margin-top: 3rem;
-    gap: 0;
     grid-template-rows: 40vh 1fr max-content;
   }
 }
@@ -170,38 +169,50 @@
   }
 }
 .planet__picture-box {
-  align-self: center;
-  justify-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.8s ease;
 }
 @media (max-width: 60em) {
   .planet__picture-box {
     grid-column: 1/span 2;
   }
 }
+@media (max-width: 37.5rem) {
+  .planet__picture-box {
+    margin-top: 8rem;
+  }
+}
 .planet__picture {
   max-height: 100%;
-  animation: fadeIn 0.3s ease;
-  transform: scale(0.92);
+  transform: scale(0.95);
+  position: relative;
 }
 @media (max-width: 68.75em) {
   .planet__picture {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 }
 @media (max-width: 60em) {
   .planet__picture {
-    transform: scale(0.7);
+    transform: scale(0.65);
     max-height: 150%;
+  }
+}
+@media (max-width: 37.5rem) {
+  .planet__picture {
+    transform: scale(0.6);
   }
 }
 .planet__picture--geology {
   animation: fadeIn 0.3s ease;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   height: 19.9rem;
   width: 15.8rem;
   top: 60%;
@@ -213,28 +224,34 @@
     top: 70%;
   }
 }
+@media (max-width: 37.5rem) {
+  .planet__picture--geology {
+    top: 60%;
+    transform: translate(-50%) scale(0.8);
+  }
+}
 .planet__text {
   width: 100%;
   max-width: 35rem;
-  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 @media (max-width: 60em) {
   .planet__text {
     grid-column: 1/span 2;
-    display: flex;
     gap: 4rem;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
     max-width: none;
-    margin-top: 2rem;
-    padding: 0 2rem;
   }
 }
 @media (max-width: 37.5rem) {
   .planet__text {
     flex-direction: column;
     text-align: center;
-    padding: 0 3.2rem;
+    margin-top: 6rem;
   }
 }
 @media (max-width: 60em) {
@@ -286,7 +303,6 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0 3.2rem;
   padding-bottom: 2rem;
 }
 @media (max-width: 60em) {
@@ -350,8 +366,6 @@
 
 html {
   font-size: 62.5%;
-  max-width: 100vw;
-  max-height: 100vh;
 }
 @media (max-width: 42em) {
   html {
@@ -360,12 +374,22 @@ html {
 }
 
 body {
-  max-width: 100vw;
-  max-height: 100vh;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: max-content 1fr;
   background-color: #070724;
   overflow-x: hidden;
   background-image: url(../../assets/images/background-stars.svg);
   background-size: cover;
+}
+
+main {
+  height: 100%;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 3.2rem;
 }
 
 .navigation {
@@ -374,6 +398,7 @@ body {
   align-items: center;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
+  z-index: 999;
 }
 @media (max-width: 60em) {
   .navigation {
