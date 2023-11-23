@@ -31,18 +31,23 @@ class PlanetView {
   }
 
   #generateImgMarkup() {
-    const imgPath1 = `<img src="assets/images/planet-${this.#planetName}.svg" class="planet__picture" alt="Picure ${
+    const imgPath1 = `<img src="assets/images/planet-${
       this.#planetName
-    } " />`;
+    }.svg" class="planet__picture" onload="this.style.opacity=1" alt="Picure ${this.#planetName} " />`;
     const imgPath2 = `
-      <img src="assets/images/planet-${this.#planetName}-internal.svg" class="planet__picture" alt="Picure ${
-      this.#planetName
-    } " />`;
+      <img src="assets/images/planet-${
+        this.#planetName
+      }-internal.svg" class="planet__picture" onload="this.style.opacity=1" alt="Picure ${this.#planetName} " />`;
 
     if (this.#view === 'overview') return imgPath1;
     if (this.#view === 'structure') return imgPath2;
     if (this.#view === 'geology') {
-      return imgPath1 + `<img class="planet__picture--geology" src="assets/images/geology-${this.#planetName}.png" />`;
+      return (
+        imgPath1 +
+        `<img class="planet__picture--geology" onload="this.style.opacity=1" src="assets/images/geology-${
+          this.#planetName
+        }.png" />`
+      );
     }
   }
 

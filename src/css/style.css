@@ -156,7 +156,7 @@
   grid-template-rows: 55rem 1fr;
   color: #fff;
   position: relative;
-  animation: fadeIn 0.8s ease;
+  animation: fadeIn 0.3s ease-in;
 }
 @media (max-width: 60em) {
   .planet {
@@ -191,6 +191,8 @@
   max-height: 100%;
   transform: scale(0.95);
   position: relative;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 @media (max-width: 68.75em) {
   .planet__picture {
@@ -209,13 +211,14 @@
   }
 }
 .planet__picture--geology {
-  animation: fadeIn 0.3s ease;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   height: 19.9rem;
   width: 15.8rem;
   top: 60%;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
 @media (max-width: 60em) {
   .planet__picture--geology {
