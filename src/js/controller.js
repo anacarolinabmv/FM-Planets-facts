@@ -24,6 +24,7 @@ const init = async function () {
 
   //3) Add the handlers to the views
   navigationView.addHandlerNavLinks(controlNavLinks);
+  navigationView.addHandlerNavBtn(controlNavLinks);
   planetView.addHandler(controlViewButtons);
 };
 
