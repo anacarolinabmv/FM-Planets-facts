@@ -72,10 +72,12 @@
       transform: translateX(-50%);
       transition: all 0.3s ease-in;
       opacity: 0;
+      pointer-events: none;
 
       &.show {
         transform: translateX(0%);
         opacity: 1;
+        pointer-events: auto;
       }
     }
   }
